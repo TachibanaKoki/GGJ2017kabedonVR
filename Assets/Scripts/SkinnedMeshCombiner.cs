@@ -18,6 +18,8 @@ public class SkinnedMeshCombiner : MonoBehaviour {
 	// 装備品のオブジェクトのリスト
 	public GameObject[] equipPartsObjectList = new GameObject[(int)MAIN_PARTS.MAX];
 
+
+    public Animator anim;
 	/// <summary>
 	/// Combine
 	/// </summary>
@@ -36,13 +38,15 @@ public class SkinnedMeshCombiner : MonoBehaviour {
 
 		// 素体のボーンを先に登録する
 		Transform[] rootBoneTransforms = this.rootBoneObject.GetComponentsInChildren<Transform> ();
-		for (int i = 0; i < rootBoneTransforms.Length; i++) {
+		for (int i = 0; i < rootBoneTransforms.Length; i++)
+        {
 			bones.Add( rootBoneTransforms[i] );
 			this.rootBoneList.Add(rootBoneTransforms[i].name, boneOffset++);
 		}
 
         // Parts Mesh Add
-        for( int p = 0; p < (int)MAIN_PARTS.MAX; p++ ) {
+        for( int p = 0; p < (int)MAIN_PARTS.MAX; p++ )
+        {
 			
 			if ( this.equipPartsObjectList[p] == null )
 				continue;
@@ -53,7 +57,8 @@ public class SkinnedMeshCombiner : MonoBehaviour {
 			
 			SkinnedMeshRenderer[] smRenderersParts = parts.GetComponentsInChildren<SkinnedMeshRenderer>();
             
-			for( int s = 0; s < smRenderersParts.Length; s++ ) {
+			for( int s = 0; s < smRenderersParts.Length; s++ )
+            {
 				SkinnedMeshRenderer smr = smRenderersParts[s];
 				materials.AddRange(smr.materials);
 				
@@ -115,7 +120,7 @@ public class SkinnedMeshCombiner : MonoBehaviour {
 				continue;
 			Destroy(this.equipPartsObjectList[p]);	
 		}
-		
+        anim = transform.GetChild(0).GetComponent<Animator>();
 	}
     
 }

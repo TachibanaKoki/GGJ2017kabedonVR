@@ -26,12 +26,16 @@ public class AvatarTest : MonoBehaviour {
 
     private GameObject player = null;
 
+    private Animator animator;
+
     // =====================================================
     // UI Interface
     // =====================================================
-    public void SelectHeadFile(int index) {
+    public void SelectHeadFile(int index)
+    {
 		int idx = (int)SkinnedMeshCombiner.MAIN_PARTS.HEAD;
-		if (headFileNames.Length >= index) {
+		if (headFileNames.Length >= index)
+        {
 			selectedFileNames[idx] = headFileNames[index];
 			Debug.Log("SelectHeadFile " + selectedFileNames[idx]);
         }
@@ -74,6 +78,7 @@ public class AvatarTest : MonoBehaviour {
 	}
 
 	void Start () {
+        animator = GetComponent<Animator>();
 		Caching.ClearCache();
 		Resources.UnloadUnusedAssets ();
         StartCoroutine (InitAvatar());
@@ -164,14 +169,15 @@ public class AvatarTest : MonoBehaviour {
 
         // レッツ・コンバイン
         smc.Combine();
-
+        smc.anim.runtimeAnimatorController = animator.runtimeAnimatorController;
+        smc.anim.CrossFadeInFixedTime(animator.GetCurrentAnimatorStateInfo(0).shortNameHash, 0);
         // AvatarTest.playerにRootを割り当てる（古いRootは削除する）
         if (player != null)
         {
             GameObject.DestroyImmediate(player);
             player = null;
         }
-
+        
         player = root;
     }
 
