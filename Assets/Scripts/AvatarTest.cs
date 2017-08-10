@@ -95,10 +95,10 @@ public class AvatarTest : MonoBehaviour {
     }
 
 	IEnumerator InitAvatar() {
-        SelectHeadFile(0);
-        SelectBodyFile(0);
-        SelectLegFile(0);
-        SelectARMFile(0);
+        SelectHeadFile(PlayerPrefs.GetInt("SelectHead"));
+        SelectBodyFile(PlayerPrefs.GetInt("SelectBody"));
+        SelectLegFile(PlayerPrefs.GetInt("SelectLeg"));
+        SelectARMFile(PlayerPrefs.GetInt("SelectARM"));
         yield return StartCoroutine(LoadAvatar());
     }
 

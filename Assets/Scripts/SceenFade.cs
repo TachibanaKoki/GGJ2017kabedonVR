@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceenFade : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class SceenFade : MonoBehaviour
     private Material fadeMaterial = null;
     private bool isFading = false;
 
+    public bool isCharaWait = true;
+
+
     void Awake()
     {
         fadeMaterial = (fadeShader != null) ? new Material(fadeShader) : new Material(Shader.Find("Transparent/Diffuse"));
@@ -19,6 +23,7 @@ public class SceenFade : MonoBehaviour
 
     void OnEnable()
     {
+       
         StartCoroutine(FadeIn());
     }
 

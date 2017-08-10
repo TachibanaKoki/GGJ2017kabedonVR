@@ -20,7 +20,7 @@ public class Slot : MonoBehaviour {
    public  UnityAction<int,int> runStopCallBack;
 
 
-    void Start()
+    void Awake()
     {
         Image = GetComponent<Image>();
     }
@@ -58,7 +58,7 @@ public class Slot : MonoBehaviour {
             }
             Image.sprite = partsImages[count];
      
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.4f);
         }
     }
 }
