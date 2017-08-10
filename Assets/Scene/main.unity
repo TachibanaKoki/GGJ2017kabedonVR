@@ -108,6 +108,28 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &508299516 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 3cef36a6c8ff5684b8c1007e29e02324, type: 3}
+  m_PrefabInternal: {fileID: 1257344731}
+--- !u!320 &508299518
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 508299516}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 437c13ea90734c140bb87f0bd656e5fb, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 508299516}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1101449101
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +194,10 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 114969818214112148, guid: 525d3accc1c850c43a2da19b7af8eb9b, type: 2}
     value: {fileID: 1101449101}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 114588164229067236, guid: 525d3accc1c850c43a2da19b7af8eb9b, type: 2}
+    value: {fileID: 508299516}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &1257344731
@@ -224,6 +250,10 @@ Prefab:
     - target: {fileID: 100000, guid: 3cef36a6c8ff5684b8c1007e29e02324, type: 3}
       propertyPath: m_Name
       value: Ikemen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 3cef36a6c8ff5684b8c1007e29e02324, type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cef36a6c8ff5684b8c1007e29e02324, type: 3}
