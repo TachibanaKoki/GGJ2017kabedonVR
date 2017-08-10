@@ -42,6 +42,7 @@ ModelImporter:
     100068: Spine1
     100070: Spine2
     100072: upper_body
+    100074: hear
     400000: _remodel1:joint12
     400002: arm
     400004: f_face
@@ -79,6 +80,7 @@ ModelImporter:
     400068: Spine1
     400070: Spine2
     400072: upper_body
+    400074: hear
     4300000: lower_body
     4300002: arm
     4300004: head
@@ -86,6 +88,7 @@ ModelImporter:
     4300008: n_face
     4300010: ikemen_head
     4300012: f_face
+    4300014: hear
     9500000: //RootNode
     13700000: arm
     13700002: f_face
@@ -94,6 +97,7 @@ ModelImporter:
     13700008: lower_body
     13700010: n_face
     13700012: upper_body
+    13700014: hear
   materials:
     importMaterials: 1
     materialName: 0
