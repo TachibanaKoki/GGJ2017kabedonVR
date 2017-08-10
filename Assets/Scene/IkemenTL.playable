@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: IkemenTL
   m_EditorClassIdentifier: 
   m_Id: 0
-  m_NextId: 19
+  m_NextId: 20
   m_Tracks:
   - {fileID: 114969818214112148}
   - {fileID: 114334762800196678}
@@ -775,7 +775,7 @@ MonoBehaviour:
     m_ClipIn: 0
     m_Asset: {fileID: 114701617391212592}
     m_UnderlyingAsset: {fileID: 74777709484843424}
-    m_Duration: 5.3
+    m_Duration: 5.5
     m_ParentID: 0
     m_TimeScale: 1
     m_BlendCurve:
@@ -859,6 +859,22 @@ MonoBehaviour:
   m_Clip: {fileID: 8300000, guid: 3474147ca02c6284cbd087861bb7544c, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
+--- !u!114 &114396416528183474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2024714994, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: AnimationPlayableAsset of StandHalfTurnRight
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 7400006, guid: 6fb3851da6a6f5948ab6892bee8ba920, type: 3}
+  m_Position: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_UseTrackMatchFields: 0
+  m_MatchTargetFields: 63
 --- !u!114 &114433721252561722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -917,11 +933,76 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
+  - m_Start: 3
+    m_ClipIn: 0
+    m_Asset: {fileID: 114396416528183474}
+    m_UnderlyingAsset: {fileID: 7400006, guid: 6fb3851da6a6f5948ab6892bee8ba920, type: 3}
+    m_Duration: 1.6666666666666667
+    m_ParentID: 0
+    m_TimeScale: 0.25
+    m_BlendCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ParentTrack: {fileID: 114588164229067236}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 0.16666666666666696
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_ID: -1635024848
+    m_Recordable: 0
+    m_PostExtrapolationMode: 1
+    m_PreExtrapolationMode: 1
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 3
+    m_DisplayName: StandHalfTurnRight
   - m_Start: 4.5
     m_ClipIn: 0
     m_Asset: {fileID: 114157941944993326}
     m_UnderlyingAsset: {fileID: 7400000, guid: fc538443d98a375429bed7ba0904cb73, type: 3}
-    m_Duration: 5.5
+    m_Duration: 5.583333333333333
     m_ParentID: 0
     m_TimeScale: 1
     m_BlendCurve:
@@ -933,8 +1014,8 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 114588164229067236}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: 0.1999999999999993
+    m_BlendInDuration: 0.16666666666666696
+    m_BlendOutDuration: 0.08333333333333215
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -980,13 +1061,13 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 4.5
+    m_PreExtrapolationTime: 0
     m_DisplayName: walk
-  - m_Start: 9.8
-    m_ClipIn: 3.0333333333333443
-    m_Asset: {fileID: 114957254602827098}
-    m_UnderlyingAsset: {fileID: 7400000, guid: 35e1448a7f0826d4387da35e972da300, type: 3}
-    m_Duration: 1.6333333333333253
+  - m_Start: 10
+    m_ClipIn: 0
+    m_Asset: {fileID: 114702615082652656}
+    m_UnderlyingAsset: {fileID: 7400000, guid: a403789bd54ab3340a661ac2cfab6a03, type: 3}
+    m_Duration: 1.0666666666666667
     m_ParentID: 0
     m_TimeScale: 1
     m_BlendCurve:
@@ -998,7 +1079,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 114588164229067236}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.1999999999999993
+    m_BlendInDuration: 0.08333333333333215
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -1040,13 +1121,13 @@ MonoBehaviour:
     m_BlendOutCurveMode: 0
     m_ExposedParameterNames: []
     m_AnimationCurves: {fileID: 0}
-    m_ID: -1639695123
+    m_ID: -1635024841
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
     m_PreExtrapolationTime: 0
-    m_DisplayName: winner
+    m_DisplayName: Don
   m_OpenClipPreExtrapolation: 0
   m_OpenClipPostExtrapolation: 0
   m_OpenClipOffsetPosition: {x: 0, y: 0, z: 0}
@@ -1082,6 +1163,22 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset of Recorded (1)
   m_EditorClassIdentifier: 
   m_Clip: {fileID: 74777709484843424}
+  m_Position: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_UseTrackMatchFields: 0
+  m_MatchTargetFields: 63
+--- !u!114 &114702615082652656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2024714994, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: AnimationPlayableAsset of Don
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 7400000, guid: a403789bd54ab3340a661ac2cfab6a03, type: 3}
   m_Position: {x: 0, y: 0, z: 0}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_UseTrackMatchFields: 0
@@ -1184,22 +1281,6 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset of idle
   m_EditorClassIdentifier: 
   m_Clip: {fileID: 7400000, guid: 449fcdbe2179c934bb7034cdf946583c, type: 3}
-  m_Position: {x: 0, y: 0, z: 0}
-  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UseTrackMatchFields: 0
-  m_MatchTargetFields: 63
---- !u!114 &114957254602827098
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 2024714994, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: AnimationPlayableAsset of winner
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 35e1448a7f0826d4387da35e972da300, type: 3}
   m_Position: {x: 0, y: 0, z: 0}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_UseTrackMatchFields: 0
