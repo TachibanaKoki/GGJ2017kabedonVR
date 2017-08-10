@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 449fcdbe2179c934bb7034cdf946583c
+timeCreated: 1502321995
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: head
+    100002: hips
+    100004: //RootNode
+    100006: kuti_d
+    100008: kuti_s
+    100010: leftarm
+    100012: leftfoot
+    100014: leftfootthumb
+    100016: leftforearm
+    100018: lefthand
+    100020: leftHandMiddle1
+    100022: leftHandMiddle2
+    100024: leftHandMiddle3
+    100026: lefthandthumb1
+    100028: lefthandthumb2
+    100030: leftleg
+    100032: leftshoulder
+    100034: leftupleg
+    100036: mabuta_L
+    100038: mabuta_R
+    100040: mayu_L
+    100042: mayu_R
+    100044: mel
+    100046: mer
+    100048: neck
+    100050: rightarm
+    100052: rightfoot
+    100054: rightfootthumb
+    100056: rightforearm
+    100058: righthand
+    100060: rightHandMiddle1
+    100062: rightHandMiddle2
+    100064: rightHandMiddle3
+    100066: righthandthumb1
+    100068: righthandthumb2
+    100070: rightleg
+    100072: rightshoulder
+    100074: rightupleg
+    100076: roots
+    100078: Skinman
+    100080: spine
+    100082: spine1
+    400000: head
+    400002: hips
+    400004: //RootNode
+    400006: kuti_d
+    400008: kuti_s
+    400010: leftarm
+    400012: leftfoot
+    400014: leftfootthumb
+    400016: leftforearm
+    400018: lefthand
+    400020: leftHandMiddle1
+    400022: leftHandMiddle2
+    400024: leftHandMiddle3
+    400026: lefthandthumb1
+    400028: lefthandthumb2
+    400030: leftleg
+    400032: leftshoulder
+    400034: leftupleg
+    400036: mabuta_L
+    400038: mabuta_R
+    400040: mayu_L
+    400042: mayu_R
+    400044: mel
+    400046: mer
+    400048: neck
+    400050: rightarm
+    400052: rightfoot
+    400054: rightfootthumb
+    400056: rightforearm
+    400058: righthand
+    400060: rightHandMiddle1
+    400062: rightHandMiddle2
+    400064: rightHandMiddle3
+    400066: righthandthumb1
+    400068: righthandthumb2
+    400070: rightleg
+    400072: rightshoulder
+    400074: rightupleg
+    400076: roots
+    400078: Skinman
+    400080: spine
+    400082: spine1
+    4300000: Skinman
+    7400000: idle
+    9500000: //RootNode
+    13700000: Skinman
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 0
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
