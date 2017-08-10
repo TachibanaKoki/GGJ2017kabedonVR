@@ -1,11 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Timeline;
+using UnityEngine.Playables;
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 
 public class AvatarTest : MonoBehaviour {
 	
     private const int partsNum = (int)SkinnedMeshCombiner.MAIN_PARTS.MAX;
+
+    [SerializeField]
+    GameObject rootParent;
+
+
+    [SerializeField]
+    PlayableDirector director;
 
     [SerializeField] private string rootBoneFileName = null;
     [SerializeField] private string[] headFileNames = null;
@@ -129,7 +139,7 @@ public class AvatarTest : MonoBehaviour {
         GameObject root = new GameObject();
         root.transform.position = Vector3.zero;
         root.transform.localScale = Vector3.one;
-		root.name = "Avatar";
+		root.name = "Ikemen";
 
         // 生成した空のGameObjectにSkinnedMeshCombinerを追加する（以下、Root)
         SkinnedMeshCombiner smc = root.AddComponent<SkinnedMeshCombiner>();
@@ -169,15 +179,18 @@ public class AvatarTest : MonoBehaviour {
 
         // レッツ・コンバイン
         smc.Combine();
-        smc.anim.runtimeAnimatorController = animator.runtimeAnimatorController;
-        smc.anim.CrossFadeInFixedTime(animator.GetCurrentAnimatorStateInfo(0).shortNameHash, 0);
+        //smc.anim.runtimeAnimatorController = animator.runtimeAnimatorController;
+        var binding = director.playableAsset.outputs.First(c => c.streamName == "Animation Track1");
+        director.SetGenericBinding(binding.sourceObject, smc.anim);
+        //smc.anim.CrossFadeInFixedTime(animator.GetCurrentAnimatorStateInfo(0).shortNameHash, 0);
         // AvatarTest.playerにRootを割り当てる（古いRootは削除する）
         if (player != null)
         {
             GameObject.DestroyImmediate(player);
             player = null;
         }
-        
+        root.transform.parent = rootParent.transform;
+
         player = root;
     }
 

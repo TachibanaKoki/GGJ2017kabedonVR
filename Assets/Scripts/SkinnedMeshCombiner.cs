@@ -113,9 +113,10 @@ public class SkinnedMeshCombiner : MonoBehaviour {
 		r.sharedMesh.boneWeights = boneWeights.ToArray();
 		r.sharedMesh.bindposes = bindposes.ToArray();
 		r.sharedMesh.RecalculateBounds();
-
+        r.updateWhenOffscreen = true;
 		// 結合前の装備品のノードは不要なので削除
-		for( int p = 0; p < (int)MAIN_PARTS.MAX; p++ ) {
+		for( int p = 0; p < (int)MAIN_PARTS.MAX; p++ )
+        {
 			if ( this.equipPartsObjectList[p] == null )
 				continue;
 			Destroy(this.equipPartsObjectList[p]);	

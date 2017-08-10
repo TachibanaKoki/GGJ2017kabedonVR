@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Clip: {fileID: 7400002, guid: 0d9d26e2162aa4d11ab075b34c029673, type: 3}
   m_Position: {x: 0, y: 0, z: 0}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UseTrackMatchFields: 0
+  m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
 --- !u!114 &114817036317194846
 MonoBehaviour:
