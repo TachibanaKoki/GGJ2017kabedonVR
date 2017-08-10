@@ -1955,10 +1955,10 @@ MonoBehaviour:
   targetParts: 0
   buttonText: {fileID: 1504950590}
   partsImages:
-  - {fileID: 21300000, guid: 827c9cd4a3943534f909ac6473e17288, type: 3}
-  - {fileID: 21300000, guid: a3983c59ebf804b4abba687bd7c9e92f, type: 3}
-  - {fileID: 21300000, guid: 9866a92691696b346901281f2b329034, type: 3}
-  - {fileID: 21300000, guid: d9f2440b0c0a7447b8409e9ff6041121, type: 3}
+  - {fileID: 21300000, guid: f6eb635146ba270438d1a928d168da3c, type: 3}
+  - {fileID: 21300000, guid: b6f1a2222ef3703479573173d8d70c9d, type: 3}
+  - {fileID: 21300000, guid: a19043620b76695499140e04a9711506, type: 3}
+  - {fileID: 21300000, guid: 67d5b0f2aa491cd4eb59a945a8d69aab, type: 3}
 --- !u!1 &1917562872
 GameObject:
   m_ObjectHideFlags: 0
