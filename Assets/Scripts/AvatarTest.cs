@@ -92,6 +92,13 @@ public class AvatarTest : MonoBehaviour {
 		Caching.ClearCache();
 		Resources.UnloadUnusedAssets ();
         StartCoroutine (InitAvatar());
+        StartCoroutine(SceneEnd());
+    }
+
+    IEnumerator  SceneEnd()
+    {
+        yield return new WaitForSeconds(55);
+        Camera.main.GetComponent<SceenFade>().LoadSceenWithFade("CharaCreater");
     }
 
 	IEnumerator InitAvatar() {
