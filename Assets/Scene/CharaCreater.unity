@@ -805,7 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 799813741}
-  sceneName: TachibanaTest
+  sceneName: main
   slots:
   - {fileID: 1904295714}
   - {fileID: 1842241532}
