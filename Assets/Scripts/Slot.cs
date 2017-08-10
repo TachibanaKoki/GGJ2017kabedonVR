@@ -10,6 +10,9 @@ public class Slot : MonoBehaviour {
     SkinnedMeshCombiner.MAIN_PARTS targetParts;
 
     [SerializeField]
+    Text buttonText;
+
+    [SerializeField]
     Sprite[] partsImages;
 
 
@@ -23,6 +26,7 @@ public class Slot : MonoBehaviour {
     void Awake()
     {
         Image = GetComponent<Image>();
+        count = Random.Range(0, partsImages.Length);
     }
 
     public void SlotStart()
@@ -31,12 +35,14 @@ public class Slot : MonoBehaviour {
         if(isRunSlot)
         {
             StartCoroutine(RunSlot());
+            buttonText.text = "STOP";
 
         }
         else
         {
             SoundManager.I.PlayOneShot("b_052");
             if (runStopCallBack != null) runStopCallBack((int)targetParts,count);
+            buttonText.text = "START";
         }
     }
 

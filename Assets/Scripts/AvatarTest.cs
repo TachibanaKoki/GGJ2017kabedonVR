@@ -185,12 +185,10 @@ public class AvatarTest : MonoBehaviour {
 
         // レッツ・コンバイン
         smc.Combine();
-        //smc.anim.runtimeAnimatorController = animator.runtimeAnimatorController;
         var binding = director.playableAsset.outputs.First(c => c.streamName == "Animation Track1");
         director.SetGenericBinding(binding.sourceObject, smc.anim);
         var bind = director.playableAsset.outputs.First(c => c.streamName == "Animation Track2");
         director.SetGenericBinding(bind.sourceObject, smc.GetComponent<Animator>());
-        //smc.anim.CrossFadeInFixedTime(animator.GetCurrentAnimatorStateInfo(0).shortNameHash, 0);
         // AvatarTest.playerにRootを割り当てる（古いRootは削除する）
         if (player != null)
         {
