@@ -31,9 +31,11 @@ public class Slot : MonoBehaviour {
         if(isRunSlot)
         {
             StartCoroutine(RunSlot());
+
         }
         else
         {
+            SoundManager.I.PlayOneShot("b_052");
             if (runStopCallBack != null) runStopCallBack((int)targetParts,count);
         }
     }

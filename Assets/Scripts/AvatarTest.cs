@@ -102,7 +102,8 @@ public class AvatarTest : MonoBehaviour {
         yield return StartCoroutine(LoadAvatar());
     }
 
-    IEnumerator LoadAvatar() {
+    IEnumerator LoadAvatar()
+    {
         if (isLoading)
         {
             Debug.Log("Now Loading!");
@@ -121,17 +122,20 @@ public class AvatarTest : MonoBehaviour {
 		// ロード待ち
         while (true) {
             bool isLoadEnd = true;
-            for ( int i = 0; i < partsNum; i++) {
+            for ( int i = 0; i < partsNum; i++)
+            {
 				if (!resourceReqs[i].isDone) isLoadEnd = false;
             }
 
-            if (isLoadEnd) {
+            if (isLoadEnd)
+            {
                 break;
             }
             yield return null;
         }
 
-		while (!bornReq.isDone) {
+		while (!bornReq.isDone)
+        {
             yield return null;
         }
 
@@ -143,20 +147,22 @@ public class AvatarTest : MonoBehaviour {
 
         // 生成した空のGameObjectにSkinnedMeshCombinerを追加する（以下、Root)
         SkinnedMeshCombiner smc = root.AddComponent<SkinnedMeshCombiner>();
-
+        smc.gameObject.AddComponent<Animator>();
         if ( bornReq.asset == null)
         {
             Debug.LogError("born asset is null");
         }
         // ルートボーン用のファイルをInstantiateする
         GameObject rootBone = (GameObject)Instantiate(bornReq.asset as GameObject);
-        if (rootBone != null) {
+        if (rootBone != null)
+        {
             rootBone.transform.parent = root.transform;
             rootBone.transform.localPosition = Vector3.zero;
             rootBone.transform.localScale = Vector3.one;
             rootBone.transform.localRotation = Quaternion.identity;
             smc.rootBoneObject = rootBone.transform;
-        } else {
+        } else
+        {
             Debug.LogError("Root Bone Instantiate Error!");
             yield break;
         }
@@ -182,6 +188,8 @@ public class AvatarTest : MonoBehaviour {
         //smc.anim.runtimeAnimatorController = animator.runtimeAnimatorController;
         var binding = director.playableAsset.outputs.First(c => c.streamName == "Animation Track1");
         director.SetGenericBinding(binding.sourceObject, smc.anim);
+        var bind = director.playableAsset.outputs.First(c => c.streamName == "Animation Track2");
+        director.SetGenericBinding(bind.sourceObject, smc.GetComponent<Animator>());
         //smc.anim.CrossFadeInFixedTime(animator.GetCurrentAnimatorStateInfo(0).shortNameHash, 0);
         // AvatarTest.playerにRootを割り当てる（古いRootは削除する）
         if (player != null)

@@ -45,7 +45,8 @@ public class CharaCreateSlot : MonoBehaviour {
         PlayerPrefs.SetInt("SelectBody",currentIndex[1]);
         PlayerPrefs.SetInt("SelectLeg",currentIndex[2]);
         PlayerPrefs.SetInt("SelectARM",currentIndex[3]);
-
+        SoundManager.I.Stop();
+        SoundManager.I.PlayOneShot(1);
         Camera.main.GetComponent<SceenFade>().LoadSceenWithFade(sceneName);
     }
 }
